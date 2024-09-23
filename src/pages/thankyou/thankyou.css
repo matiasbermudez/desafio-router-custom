@@ -1,0 +1,27 @@
+
+.thankyou__contenedor {
+    margin: 30px;
+  }
+  
+  .thankyou__titulo {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  
+  .thankyou__strong {
+    font-size: 22px;
+    font-weight: 500;
+    
+  }
+  
+  .thankyou__boton {
+    margin: 40px 0 70px 0;
+    font-size: 18px;
+    font-weight: 600;
+    height: 50px;
+    width: 100%;
+    color: black;
+    background: #9CBBE9;
+    border-radius: 4px;
+  
+  }

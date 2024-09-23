@@ -1,31 +1,36 @@
-import { initPageA } from "./pages/page-a";
-import { initPageB } from "./pages/page-b";
+import { initWelcome } from "./pages/Welcome";
+import { initStep1 } from "./pages/step-1";
+import { initThankYou } from "./pages/thankyou";
 
 const routes = [{
-    path: /\/a/,
-    component: initPageA
+    path: /\/welcome/,
+    component: initWelcome
 },
 {
-    path: /\/b/,
-    component: initPageB
+    path: /\/step-1/,
+    component: initStep1
+},
+{
+    path: /\/thankyou/,
+    component: initThankYou
 },
 ];
 
-export function initRouter(container: Element) {    
-    console.log(container)
+export function initRouter(container: Element) {
+
     function goTo(path: any) {
         history.pushState({}, "", path);
         handlerRoute(path)
     }
-    
+
     function handlerRoute(route: any) {
         console.log("handlerRoute : ", route)
-      
-        for (const r of routes){
-            if(r.path.test(route)){
-                const el = r.component({goTo : goTo});
-                
-                if(container.firstChild){
+
+        for (const r of routes) {
+            if (r.path.test(route)) {
+                const el = r.component({ goTo: goTo });
+
+                if (container.firstChild) {
                     container.firstChild.remove();
                 }
 
@@ -33,7 +38,13 @@ export function initRouter(container: Element) {
             }
         }
     }
-    handlerRoute(location.pathname)
+
+    //REDIRECT PARA QUE CUANDO INICIA "VACIA" TE MANDE A WELCOME
+    if (location.pathname == "/") {
+        goTo('/welcome')
+    } else {
+        handlerRoute(location.pathname)
+    }
 }
 
 

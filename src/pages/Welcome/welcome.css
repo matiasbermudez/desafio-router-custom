@@ -1,0 +1,48 @@
+/*WELCOME CSS*/
+.welcome__contenedor{
+    margin: 30px;
+  }
+  .welcome__titulo{
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 61px;
+    margin-bottom: 30px;
+  }
+  .welcome__articulo{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 50px;
+  }
+  .welcome__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 70px;
+  }
+  .welcome__form-strong{
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .welcome__form-label{
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 18px;
+    gap: 15px;
+  }
+  .welcome__form-input{
+    height: 45px;
+    border: solid 2px rgb(48, 47, 47);
+    border-radius: 4px;
+    background-color: white;
+  }
+  .welcome__form-submit{
+    background-color: #9CBBE9 ;
+    color: black;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 700 ;
+    border-radius: 4px;
+  }
+  
